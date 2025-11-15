@@ -1,4 +1,4 @@
-// modern printf / sprintf replacement - chatGPT
+// modern printf / sprintf replacement with correct HTML space padding for %3d, %5d, etc.
 
 function sprintf(format, ...args) {
   let i = 0;
@@ -33,14 +33,24 @@ function sprintf(format, ...args) {
         break;
     }
 
-    if (value.length < width) {
-      const pad = (zeroPad && !leftJustify ? '0' : ' ').repeat(width - value.length);
-      value = leftJustify ? value + pad : pad + value;
+    let padlen = width - value.length;
+    if (padlen > 0) {
+      let padChar = zeroPad && !leftJustify ? '0' : ' ';
+      let padding = padChar.repeat(padlen);
+      if (leftJustify) {
+        value = value + padding;
+      } else {
+        value = padding + value;
+      }
     }
-    return value;
-  });
-}
 
-function printf(format, ...args) {
-  document.write(sprintf(format, ...args));
+    // Replace leading/trailing spaces with &nbsp; for proper HTML rendering
+    if (!leftJustify) {
+      value = value.replace(/^ +/, m => '&nbsp;'.repeat(m.length));
+    } else {
+      value = value.replace(/ +$/g, m => '&nbsp;'.repeat(m.length));
+    }
+
+    return value ;
+  });
 }
