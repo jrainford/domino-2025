@@ -10,84 +10,54 @@
 <body>
     <h1>Welcome to Domino 2025</h1>
 
-    <h2>The original game</h2>
-    <p>
-        <a href="original/index.html">The original game</a>
-    </p>
-    <p>This is the classic version of the game from 1983.</p>
-    <p>The game is for 2 players.  The object of the game is to keep going longer than your
-        opponent.
-    </p>
-    <p>
-        The board starts out yellow with a black border.  Each player must steer themselves
-        into blank, ie yellow space.  They must not hit the border, the other player or themselves.
-    </p>
+    <section>
+        <h2>The original game</h2>
+        <p><a href="original/index.html">Play the original game</a></p>
+        <p>This is the classic version of the game from 1983, designed for 2 players. The object of the game is to keep going longer than your opponent.</p>
+        <p>The board starts yellow with a black border. Each player must steer themselves into blank (yellow) space and avoid hitting the border, the other player, or themselves.</p>
 
-   <strong>Player controls:</strong>
+        <strong>Player controls:</strong>
+        <table border="1" cellpadding="6" cellspacing="0">
+            <caption>Controls for Players</caption>
+            <tr>
+                <th>Player</th>
+                <th>Turn Left</th>
+                <th>Turn Right</th>
+            </tr>
+            <tr>
+                <td>Player 1</td>
+                <td>Q</td>
+                <td>W</td>
+            </tr>
+            <tr>
+                <td>Player 2</td>
+                <td>O</td>
+                <td>P</td>
+            </tr>
+        </table>
+<br><br>
 
-<table border="1" cellpadding="6" cellspacing="0">
-    <tr>
-        <th>Player</th>
-        <th>Turn Left</th>
-        <th>Turn Right</th>
-    </tr>
+        <details>
+            <summary>Technical details and history</summary>
+            <p>This classic DOM-based version uses standard HTML elements and <code>document.write</code>. It was written in JavaScript around 1998, based on my very first version from 1983 on a PDP-11 using ANSI escape sequences.</p>
+            <p>The name "Domino" was inspired by the character-based terminal screen that resembled domino tiles being laid.</p>
+            <p>I am keeping the original for simplicity and plan to use it as a base to allow more players and transition to HTML Canvas, eventually removing <code>document.write</code>.</p>
+        </details>
+    </section>
 
-    <tr>
-        <td>Player 1</td>
-        <td>Q</td>
-        <td>W</td>
-    </tr>
-
-    <tr>
-        <td>Player 2</td>
-        <td>O</td>
-        <td>P</td>
-    </tr>
-</table>
-
-   <br><br><br>
-
-    <details>
-        <summary>Technical details and history</summary>
-        <p>
-            This is the classic, but outdated, DOM-based version built years ago. It uses
-            standard HTML elements (TABLE, TR, TD) rather than canvas. It also relies on
-            <code>document.write</code>, which is long deprecated. It was written in JavaScript
-            around 1998. Going back even further, I created the very first version of "domino" in
-            1983 on a PDP-11 in Coral-66 running on a VT100 terminal using ANSI escape sequences.
-            This 1998 Javascript version plays the same as on the 1983 VT100 version.
-        </p>
-        <p>
-            The name "Domino" came to me back in 1998 as the character-based nature of the terminal
-            screen made it look like domino tiles being laid.
-        </p>
-
-        <p>
-            I am keeping the original as it's uncomplicated by objects, jquery, events etc, so easy to explain to
-            someone who's never seen programming of any kind.
-            I plan to use the original as a base to include perhaps simple player objects in an array to allow
-            multi-player (rather than just 2) and to use the HTML Canvas. I plan to ditch use
-            of <code>document.write</code>
-        </p>
-    </details>
-
-    <br><br><br>
+    <br><br>
     <hr>
 
-    <h2>The Work in Progress 2025 version</h2>
-    <p>
-        <a href="2025/index.html">The Work in Progress 2025 version</a>
-    </p>
-    <p>This is the new but canvas‑based rewrite (under development)</p>
-    <details>
-        <summary>More details</summary>
-        <p>
-            This version will use the HTML Canvas rather than an HTML table.
-            It may use some objects, but will weigh this up against the benefits of code readibility
-            for someone new to programming. The new version will likely allow more than 2 players and
-            a "practice" mode to get used to just having 2 keys rather than 4 for each player
-        </p>
-    </details>
+    <section>
+        <h2>The Work in Progress 2025 version</h2>
+        <p><a href="2025/index.html">Play the WIP 2025 version</a></p>
+        <p>This canvas-based rewrite is under development.</p>
+
+        <details>
+            <summary>More details</summary>
+            <p>This version will use HTML Canvas, may use objects selectively, and aims for readability for newcomers. It will likely allow more than 2 players and include a practice mode for simpler controls.</p>
+        </details>
+    </section>
 </body>
 
 </html>
