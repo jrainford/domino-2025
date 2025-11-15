@@ -2,31 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domino 2025</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            min-height: 100vh;
-            margin: 2em 0 0 0; /* small top margin */
-            text-align: center;
-        }
-        p a {
-            display: block;
-            margin: 0.5em 0;
-        }
-    </style>
 </head>
-
 <body>
     <h1>Welcome to Domino 2025</h1>
+
+    <h2>The original game</h2>
     <p>
-        <a href="original/index.html">Go to the original version</a>
-        <a href="2025/index.html">Go to WIP 2025 version</a>
+        <a href="original/index.html">The original game</a>
+    </p>
+    <p>
+        This is the classic, but outdated, DOM-based version built years ago. It uses
+        standard HTML elements (TABLE, TR, TD) rather than canvas. It also relies on
+        <code>document.write</code>, which is long deprecated. It was written in JavaScript
+        around 1998. Going back even further, I created the very first version of "domino" in
+        1983 on a PDP-11 in Coral-66 running on a VT100 terminal using ANSI escape sequences.
+    </p>
+
+    <h2>The Work in Progress 2025 version</h2>
+    <p>
+        <a href="2025/index.html">The Work in Progress 2025 version</a>
+    </p>
+    <p>
+        This is the new canvas-based rewrite. It’s still being developed, but the goal
+        is a smoother, more modern version that’s easier to extend.
     </p>
 </body>
-
 </html>
